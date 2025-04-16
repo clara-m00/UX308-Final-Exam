@@ -1,23 +1,31 @@
-import {fahrenheitToCelsius, hello} from './functions.js';
+import { colour_mix, largest_product} from './functions.js';
 
-function Question1(){
+function Question1() {
     return <section>
-1. Write a function that takes a _name_ as an argument and _returns a string_ that _contains "hello"_ and the name paramerer. Test at least 3 names. <br />*Note ... I solved this one already
-      <h2>results</h2>
-      <p>hello("Rich") == "{hello('Rich')}"</p>
-      <p>hello("Bill") == "{hello('Bill')}"</p>
-      <p>hello("Chris") == "{hello('Chris')}"</p>
+        <h2>Question 1. Colour Mix: Determines the secondary rgb_colour from mixing two primary
+            RGB (Red, Green, Blue) colours. The order of the colours
+            is *not* significant. </h2>
+        <h3>test results</h3>
+        <p>colour_mix("green","red") == "{colour_mix("green", "red")}"</p>
+        <p>colour_mix("blue","red") == "{colour_mix("blue", "red")}"</p>
+        <p>colour_mix("yellow", "yellow") == "{colour_mix("yellow", "yellow")}"</p>
+        <p>colour_mix("green", "blue") == "{colour_mix("green", "blue")}"</p>
     </section>;
 }
 
-function Question2(){
+function Question2() {
     return <section>
-2. Write a function that converts from fahrenheit to celsius        
-<h2>results</h2>
-<p>fahrenheitToCelsius(32) == "{fahrenheitToCelsius(32)}"</p>
-<p>fahrenheitToCelsius(212) == "{fahrenheitToCelsius(212)}"</p>
-<p>fahrenheitToCelsius(70) == "{fahrenheitToCelsius(70)}"</p>
-    </section>
+        <h2>Question 2. Largest Product: Returns the product of the two largest values of
+        val1, val2, and val3. </h2>
+        <h3>test results</h3>
+        <p>largest_product("2","5","3") == "{largest_product("2","5","3")}"</p>
+        <p>largest_product("-8","12","20") == "{largest_product("-8","12","20")}"</p>
+        <p>largest_product("15", "0","60") == "{largest_product("15", "0","60")}"</p>
+        <p>largest_product("10","6","1") == "{largest_product("10","6","1")}"</p>
+       
+    </section>;
 }
 
-export {Question1, Question2}
+
+
+export { Question1, Question2 }
