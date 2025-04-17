@@ -124,4 +124,69 @@ function day_of_the_week(day_num) {
     }
 
 }
-    export { colour_mix, largest_product, day_of_the_week }
+
+function pay_raise(status, years, salary) {
+    /*
+    -------------------------------------------------------
+    Calculates pay raises for employees. Pay raises are based on:
+    status: Full Time ('F)' or Part Time ('P')
+    and years of service
+    Raises are:
+        5% for full time greater than or equal to 10 years service
+        1.5% for full time less than 4 years service
+        3% for part time greater than 10 years service
+        1% for part time less than 4 years service
+        2% for all others
+    Use: new_salary = pay_raise(status, years, salary)
+    -------------------------------------------------------
+    Parameters:
+        status - employment type (str - 'F' or 'P')
+        years - number of years employed (int > 0)
+        salary - current salary (float > 0)
+    Returns:
+        new_salary - employee's new salary (float).
+    -------------------------------------------------------
+    */
+    if (status === "F" && years >= 10) {
+        return salary * 1.05;
+    } else if (status === "F" && years < 4) {
+        return salary * 1.015;
+    } else if (status === "P" && years > 10) {
+        return salary * 1.03;
+    } else if (status === "P" && years < 4) {
+        return salary * 1.01;
+    } else {
+        return salary * 1.02;
+    }
+}
+
+function is_leap(year) {
+    /*
+    -------------------------------------------------------
+    Determines if a year is a leap year. Every year that is
+    exactly divisible by four is a leap year, except for years
+    that are exactly divisible by 100, but these centurial years
+    are leap years if they are exactly divisible by 400. For
+    example, the years 1700, 1800, and 1900 are not leap years,
+    but the years 1600 and 2000 are.
+    Use: result = is_leap(year)
+    -------------------------------------------------------
+    Parameters:
+        year - a year (int > 0)
+    Returns:
+        result - True if year is a leap year,
+            False otherwise (boolean)
+    ------------------------------------------------------
+    */
+    if (year % 400 === 0) {
+        return "true";
+    } else if (year % 4 === 0 && year % 100 !== 0) {
+        return "true";
+    } else {
+        return "false";
+    }
+
+}
+
+
+export { colour_mix, largest_product, day_of_the_week, pay_raise, is_leap }
