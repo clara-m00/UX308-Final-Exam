@@ -1,4 +1,4 @@
-import { colour_mix, largest_product} from './functions.js';
+import { colour_mix, largest_product, day_of_the_week} from './functions.js';
 
 function Question1() {
     return <section>
@@ -26,6 +26,16 @@ function Question2() {
     </section>;
 }
 
+function Question3() {
+    return <section>
+        <h2>Question 3. Day of the Week: Returns the name of a day of the week given an integer day number. </h2>
+        <h3>test results</h3>
+        <p>day_of_the_week(1) == "{day_of_the_week(1)}"</p>
+        <p>day_of_the_week(5) == "{day_of_the_week(5)}"</p>
+        <p>day_of_the_week(2) == "{day_of_the_week(2)}"</p>
+        <p>day_of_the_week(6) == "{day_of_the_week(6)}"</p>
+        
+    </section>;
+}
 
-
-export { Question1, Question2 }
+export { Question1, Question2, Question3 }

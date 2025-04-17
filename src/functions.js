@@ -86,12 +86,12 @@ function largest_product(val1, val2, val3) {
         return val2 * val3;
     } else if (val2 <= val1 && val2 <= val3) {
         return val1 * val3;
-    } else if (val3 <= val1 && val3 <= val2){
-        return val1 * val2 
+    } else if (val3 <= val1 && val3 <= val2) {
+        return val1 * val2
     }
 }
 
-function day_of_the_week(day_num){
+function day_of_the_week(day_num) {
     /*
     -------------------------------------------------------
     Returns the name of a day of the week given an integer day number.
@@ -105,6 +105,23 @@ function day_of_the_week(day_num){
         day - name of a day of the week (str)
     ------------------------------------------------------
     */
-}
+    if (day_num === 1) {
+        return "Sunday";
+    } else if (day_num === 2) {
+        return "Monday";
+    } else if (day_num === 3) {
+        return "Tuesday";
+    } else if (day_num === 4) {
+        return "Wednesday";
+    } else if (day_num === 5) {
+        return "Thursday";
+    } else if (day_num === 6) {
+        return "Friday";
+    } else if (day_num === 7) {
+        return "Saturday";
+    } else {
+        return "Error"
+    }
 
-export { colour_mix, largest_product }
+}
+    export { colour_mix, largest_product, day_of_the_week }
